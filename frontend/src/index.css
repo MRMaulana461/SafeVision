@@ -1,0 +1,76 @@
+:root {
+  /* -- Color tokens -------------------------------------------------- */
+  --bg-void: #0a0d0f;
+  --bg-panel: #12171a;
+  --bg-panel-raised: #171d21;
+  --line-hairline: #263136;
+  --line-hairline-strong: #34434a;
+
+  --ink-primary: #e9ede9;
+  --ink-secondary: #93a3a4;
+  --ink-tertiary: #5c6b6c;
+
+  --hazard-yellow: #f4c000;
+  --hazard-yellow-dim: #8a6e08;
+  --signal-safe: #2fd6a0;
+  --signal-safe-dim: rgba(47, 214, 160, 0.14);
+  --signal-alert: #ff4d5e;
+  --signal-alert-dim: rgba(255, 77, 94, 0.14);
+
+  /* -- Type ------------------------------------------------------------ */
+  --font-display: 'Archivo Black', 'IBM Plex Sans', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-void);
+  color: var(--ink-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image:
+    linear-gradient(var(--line-hairline) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-hairline) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+  background-attachment: fixed;
+  opacity: 1;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--hazard-yellow);
+  color: #0a0d0f;
+}
+
+:focus-visible {
+  outline: 2px solid var(--hazard-yellow);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,8 @@
+Taruh file model kamu di sini dengan nama: best.onnx
+
+Contoh (dari folder frontend, PowerShell):
+  Copy-Item ..\backend\weights\best.onnx public\models\best.onnx
+
+File ini WAJIB ada supaya app bisa jalan. Ukurannya akan ikut ter-bundle
+saat build & ter-push ke GitHub Pages (jadi pastikan repo GitHub kamu
+tidak melebihi limit ukuran repo/LFS kalau file besar).

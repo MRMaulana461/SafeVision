@@ -1,0 +1,8 @@
+Taruh file model kamu di sini dengan nama: best.pt
+
+Contoh (dari mesin lokal kamu):
+  cp PPE/PPEBoundingBox/ppe_results/ppe_detection/weights/best.pt backend/weights/best.pt
+
+File .pt biasanya berukuran puluhan MB — jika mau di-deploy ke Railway,
+pastikan file ini ikut ter-commit ke git (git add -f jika di-ignore) atau
+gunakan Railway Volume / URL download eksternal (lihat README).
